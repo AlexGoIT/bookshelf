@@ -1,0 +1,35 @@
+.page-header {
+}
+
+.header-container {
+  padding: 22px 24px;
+}
+
+.header-logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+}
+
+.header-logo__svg {
+  background-color: rgb(134, 134, 134);
+}
+
+.header-logo__text {
+  color: #000;
+  font-size: 28px;
+  font-weight: 700;
+}
+
+.header-container {
+  width: 1440px;
+  height: 72px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+
+  border-radius: 0px 0px 8px 8px;
+  border: 1.5px solid #111;
+  background: #fff;
+}

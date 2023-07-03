@@ -1,2 +1,31 @@
+@import './reset';
 @import './common';
-@import './example';
+@import './base';
+@import './header';
+@import './catalog';
+@import './category-list';
+@import './support-list';
+
+.main-block {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 40px 24px;
+  display: flex;
+  flex-direction: row;
+  gap: 40px;
+
+  background-color: aquamarine;
+}
+
+.aside-block {
+  width: 356px;
+  display: flex;
+  flex-direction: column;
+  gap: 86px;
+  background-color: burlywood;
+}
+
+.article-block {
+  width: 996px;
+  background-color: cornflowerblue;
+}
