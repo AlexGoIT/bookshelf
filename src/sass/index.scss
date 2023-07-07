@@ -6,6 +6,11 @@
 @import './category-list';
 @import './support-list';
 
+@import './mobile-menu';
+@import './modal-registration';
+@import './modal-book-info';
+@import './_footer';
+
 .main-block {
   max-width: 1440px;
   margin: 0 auto;
