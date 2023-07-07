@@ -1,6 +1,6 @@
 // swiper =======================================
 .swiper {
-  width: 335px;
+  width: 100%;
 }
 
 .swiper-btn-prev,
@@ -59,8 +59,7 @@
 // Mobile =======================================
 .all-books-wrapper {
   margin: 0 auto;
-  padding-inline: 20px;
-  width: 375px;
+  width: 100%;
   display: flex;
   flex-direction: column;
 }
@@ -119,7 +118,7 @@
 
 .book-image {
   width: 335px;
-  height: 485px;
+  height: auto;
 }
 
 .book-overlay {
@@ -213,8 +212,6 @@
   }
 
   .all-books-wrapper {
-    width: 768px;
-    padding-inline: 32px;
     display: flex;
     flex-direction: column;
   }
@@ -228,7 +225,6 @@
   }
 
   .all-book-list {
-    margin-top: 40px;
     display: flex;
     flex-direction: column;
     gap: 40px;
@@ -275,7 +271,6 @@
 
   .all-books-wrapper {
     width: 996px;
-    padding-inline: 0;
   }
 
   .category-book-item {
