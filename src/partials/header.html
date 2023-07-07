@@ -1,10 +1,36 @@
 <header class="page-header">
   <div class="header-container container">
-    <a class="header-logo" href="/">
-      <svg class="header-logo__svg" width="24" height="24">
-        <use href="./images/sprite.svg#logo"></use>
-      </svg>
-      <span class="header-logo__text">Bookshelf</span></a
-    >
+    <nav class="header-nav">
+          <a class="header-logo" href="/">
+            <svg class="header-logo__svg" width="24" height="24">
+              <use href="./images/sprite.svg#logo"></use>
+            </svg>
+            <span class="header-logo__text">Bookshelf</span>
+          </a>
+          <a href="" class="header-home-link">Home</a>
+          <a href="" class="header-shopping-list-link">Shopping list
+            <svg class="logo-head-icon" width="20" height="20">
+              <use href="./images/sprite.svg#icon-cart"></use>
+            </svg>
+            <span class="header-book-count"></span>
+          </a>
+    </nav>       
+    <div class="header-team-user-wrapper">
+      <div class="header-team">
+          <input class="switch" type="checkbox" id="js-switch-theme" />
+          <label class="switch-label" for="js-switch-theme">Toggle</label>        
+      </div>
+
+
+      <button class="header-user-btn" data-modal-open-desk type="button"> 
+        <svg class="header-user-svg" width="37" height="37">
+          <use href="./images/sprite.svg#icon-user" class="header-user-icon"></use>
+        </svg>     
+        User
+        <svg class="arrow-down-header" width="23" height="26">
+          <use href="./images/sprite.svg#icon-arrow-down"></use>
+        </svg>        
+      </button>        
   </div>
+</div>
 </header>
