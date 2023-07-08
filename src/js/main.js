@@ -18,12 +18,19 @@ function initUI() {
   //     console.log(error);
   //   });
 
+  // bookApi
+  //   .getCategoryList()
+  //   .then(categories => {
+  //     renderCategoryList(categories);
+  //   })
+  //   .catch(error => {
+  //     console.log(error);
+  //   });
+
   renderTopBooks(topBookList);
   renderCategoryList(categoryList);
 
   refs.categoryListEl.firstElementChild.classList.add('active');
-
-  console.dir(refs.categoryListEl);
 }
 
 window.onload = () => {
