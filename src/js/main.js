@@ -5,32 +5,39 @@ import BookApi from './services/book-api';
 
 import renderTopBooks from './render/render-top-books';
 import renderCategoryList from './render/render-category-list';
+import toggleLoader from './loader';
 
 import refs from './refs/refs';
 
 const bookApi = new BookApi();
 
 function initUI() {
-  // bookApi
-  //   .getTopBook()
-  //   .then(topBookList => renderTopBooks(topBookList))
-  //   .catch(error => {
-  //     console.log(error);
-  //   });
+  toggleLoader();
 
-  // bookApi
-  //   .getCategoryList()
-  //   .then(categories => {
-  //     renderCategoryList(categories);
-  //   })
-  //   .catch(error => {
-  //     console.log(error);
-  //   });
+  bookApi
+    .getTopBook()
+    .then(topBookList => renderTopBooks(topBookList))
+    .catch(error => {
+      console.log(error);
+    })
+    .finally(() => {
+      toggleLoader();
+    });
 
-  renderTopBooks(topBookList);
-  renderCategoryList(categoryList);
+  bookApi
+    .getCategoryList()
+    .then(categories => {
+      renderCategoryList(categories);
+      refs.categoryListEl.firstElementChild
+        .getElementsByTagName('a')[0]
+        .classList.add('active');
+    })
+    .catch(error => {
+      console.log(error);
+    });
 
-  refs.categoryListEl.firstElementChild.classList.add('active');
+  // renderTopBooks(topBookList);
+  // renderCategoryList(categoryList);
 }
 
 window.onload = () => {

@@ -33,7 +33,8 @@
   }
 }
 
-.category-list__item.active {
-  color: #4f2ee8;
+.category-list__item > .category-list__link.active {
+  font-weight: 700;
   text-transform: uppercase;
+  color: #4f2ee8;
 }
