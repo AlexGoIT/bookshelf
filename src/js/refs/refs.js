@@ -1,7 +1,7 @@
 const refs = {
   // Top Books ================================================================
-  allBooksTitleEl: document.querySelector('.all-books-title'),
-  allBooksListEl: document.querySelector('.all-book-list'),
+  booksTitleEl: document.querySelector('.books-title'),
+  booksListEl: document.querySelector('.book-list'),
 
   // Category List ============================================================
   categoryListEl: document.querySelector('.category-list'),

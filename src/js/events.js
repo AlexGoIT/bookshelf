@@ -1,7 +1,7 @@
 import refs from './refs/refs';
 
 // Catalog events
-refs.allBooksListEl.addEventListener('click', e => {
+refs.booksListEl.addEventListener('click', e => {
   e.preventDefault();
 
   if (e.target.nodeName === 'BUTTON') {

@@ -3,5 +3,5 @@
 
 // import './tests/test-catalog.js';
 import './js/main';
-import './js/events';
+// import './js/events';
 import './js/loader';

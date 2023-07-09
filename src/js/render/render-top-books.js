@@ -2,13 +2,14 @@ import Swiper, { Navigation } from 'swiper';
 import 'swiper/swiper-bundle.min.css';
 import 'swiper/swiper.min.css';
 
+import createBookCardMarkup from './createBookCardMarkup';
 import refs from '../refs/refs';
 
 export default function renderTopBooks(topBookList) {
-  refs.allBooksTitleEl.innerHTML =
-    'Best Sellers&nbsp;<span class="all-books-title-accent">Books<span>';
+  refs.booksTitleEl.innerHTML =
+    'Best Sellers&nbsp;<span class="books-title-accent">Books<span>';
 
-  refs.allBooksListEl.innerHTML = topBookList
+  refs.booksListEl.innerHTML = topBookList
     .map(category => createBookCategoryMarkup(category))
     .join('');
 
@@ -56,26 +57,4 @@ function createBookCategoryMarkup({ list_name, books }) {
       </div>
     </li>
   `;
-}
-
-// Function Create Book Card Markup ==================
-function createBookCardMarkup(books) {
-  return books
-    .map(
-      ({ _id, title, author, book_image, description }) => `
-  <li class="category-book-item swiper-slide" data-book-id="${_id}">
-    <a href="#" class="book-link">
-      <div class="book-image-wrapper">
-        <img class="book-image" src="${book_image}" alt="${title}" loading="lazy"/>
-        <div class="book-overlay">${
-          description ? description : 'No description'
-        }</div>
-      </div>
-      <h3 class="book-title">${title}</h3>
-      <p class="book-author">${author}</p>
-    </a>
-  </li>
-  `
-    )
-    .join('');
 }
