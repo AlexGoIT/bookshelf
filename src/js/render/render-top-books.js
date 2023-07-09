@@ -2,7 +2,7 @@ import Swiper, { Navigation } from 'swiper';
 import 'swiper/swiper-bundle.min.css';
 import 'swiper/swiper.min.css';
 
-import createBookCardMarkup from './createBookCardMarkup';
+import createBookCardMarkup from './create-book-card-markup';
 import refs from '../refs/refs';
 
 export default function renderTopBooks(topBookList) {
@@ -12,6 +12,7 @@ export default function renderTopBooks(topBookList) {
   refs.booksListEl.innerHTML = topBookList
     .map(category => createBookCategoryMarkup(category))
     .join('');
+  refs.booksListEl.style.flexFlow = 'column';
 
   // swiper ===================================================================
   const swiper = new Swiper('.swiper', {

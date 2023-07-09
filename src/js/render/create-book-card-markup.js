@@ -1,9 +1,11 @@
 // Function Create Book Card Markup ==================
-export default function createBookCardMarkup(books) {
+export default function createBookCardMarkup(books, swiper = true) {
   return books
     .map(
       ({ _id, title, author, book_image, description }) => `
-  <li class="category-book-item swiper-slide" data-book-id="${_id}">
+  <li class="category-book-item ${
+    swiper ? 'swiper-slide' : ''
+  }" data-book-id="${_id}">
     <a href="#" class="book-link">
       <div class="book-image-wrapper">
         <img class="book-image" src="${book_image}" alt="${title}" loading="lazy"/>
